@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Q_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:visibility="invisible">
+
+        <TextView
+            android:id="@+id/txt_fråga1"
+            android:layout_width="197dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="monospace"
+            android:text="Ett ICMP-paket skickas alltid hela vägen tillbaka till avsändaren"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_fråga2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_fråga2"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txt_fråga2"
+            android:layout_width="196dp"
+            android:layout_height="129dp"
+            android:fontFamily="monospace"
+            android:text="På en ADSL-ledning är frekvensutrymmet för tal mindre än frekvensutrymmet för uppströmsdata"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_fråga4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txt_fråga3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="148dp"
+            android:fontFamily="monospace"
+            android:text="Jitter innebär att fördröjningen mellan en sändare och mottage varierar så att det tar olika tid för paketen att komma fram"
+            android:textAlignment="center"
+            android:textColor="#090909"
+            android:textSize="17sp"
+            app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toTopOf="@+id/btn_falskt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txt_fråga4"
+            android:layout_width="196dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="130dp"
+            android:fontFamily="monospace"
+            android:text="LEO-satelliter används exempelvis för GPS"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_fråga1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txt_fråga5"
+            android:layout_width="196dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="190dp"
+            android:fontFamily="monospace"
+            android:text="UDP-segment innehåller sekvensnummer"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_fråga3"
+            tools:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_sant"
+            android:layout_width="125dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="246dp"
+            android:fontFamily="serif"
+            android:onClick="btnTrue_onClick"
+            android:text="Sant"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fråga5" />
+
+        <Button
+            android:id="@+id/btn_falskt"
+            android:layout_width="119dp"
+            android:layout_height="85dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="246dp"
+            android:fontFamily="serif"
+            android:onClick="btnFalse_onClick"
+            android:text="Falskt"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fråga3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Correct_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#34CF3B">
+
+        <Button
+            android:id="@+id/btn_menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="186dp"
+            android:fontFamily="serif"
+            android:onClick="btnBack_onClick"
+            android:text="Tillbaka till startskärm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_felSvar2" />
+
+        <TextView
+            android:id="@+id/txt_felSvar2"
+            android:layout_width="236dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="136dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="serif"
+            android:text="RÄTT SVAR!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_menu2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Wrong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F10909">
+
+        <TextView
+            android:id="@+id/txt_felSvar"
+            android:layout_width="195dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="171dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="serif"
+            android:text="FEL SVAR!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="230dp"
+            android:fontFamily="serif"
+            android:onClick="btnBack_onClick"
+            android:text="Tillbaka till startskärm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_felSvar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        tools:visibility="invisible">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="217dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="329dp"
+            android:fontFamily="serif"
+            android:onClick="btnStart_onClick"
+            android:text="Fråga!"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="210dp"
+            android:theme="@style/Theme.MyApplication.AppBarOverlay"
+            app:layout_constraintBottom_toTopOf="@+id/btn_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="413dp"
+                android:layout_height="0dp"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.MyApplication.PopupOverlay" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="#9C27B0"
+                android:fontFamily="serif"
+                android:text="Quiz"
+                android:textAlignment="center"
+                android:textColor="#F9F7FB"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
